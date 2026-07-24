@@ -1,17 +1,15 @@
-import articleImg from '../img/article.jpg'
-
-function Article() {
+function Article({ url, image, title, description }) {
   return (
     <>
       <article className="course">
-        <a href="https://v.daum.net/v/20260719141609940">
-          <img className="course__img" src={articleImg} alt="" />
+        <a href={url}>
+          <img className="course__img" src={image} alt={title} />
         </a>
         <div className="course__body">
-          <a href="https://v.daum.net/v/20260719141609940">
-            <div className="course__title">열리지 말았어야 할 경기 였다.</div>
+          <a href={url}>
+            <div className="course__title">{title}</div>
           </a>
-          <div className="course__description">스타 뉴스 - 7시간 전</div>
+          <div className="course__description">{description}</div>
         </div>
       </article>
     </>
